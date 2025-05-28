@@ -23,7 +23,7 @@ enc_aes_key = rsa_cipher.encrypt(aes_key)
 
 # 4. Kirim ciphertext AES key dan ciphertext pesan ke server
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect(('localhost', 12345))
+client_socket.connect(('165.22.48.119', 80))
 
 client_socket.send(enc_aes_key)      # 256 bytes
 client_socket.send(enc_msg)          # sisa bytes (ciphertext pesan)

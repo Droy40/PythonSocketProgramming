@@ -9,7 +9,7 @@ with open("private.pem", "rb") as f:
 rsa_cipher = PKCS1_OAEP.new(private_key)
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.bind(('localhost', 12345))
+server_socket.bind(('165.22.48.119', 80))
 server_socket.listen(1)
 print('Server listening...')
 
